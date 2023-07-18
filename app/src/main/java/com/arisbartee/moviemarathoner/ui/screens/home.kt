@@ -8,11 +8,17 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+
+import androidx.navigation.NavHostController
+import com.arisbartee.moviemarathoner.ui.parts.MMBottomBar
 
 @Composable
-fun HomeScreen(){
-    Scaffold() {paddingValues ->
+fun HomeScreen(
+    bottomBar: @Composable () -> Unit
+){
+    Scaffold(
+        bottomBar = bottomBar
+    ) { paddingValues ->
         Column(
             modifier = Modifier.padding(paddingValues)
         ){
@@ -24,10 +30,4 @@ fun HomeScreen(){
             }
         }
     }
-}
-
-@Preview
-@Composable
-fun HomeScreenPreview(){
-    HomeScreen()
 }

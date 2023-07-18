@@ -21,6 +21,7 @@ androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref="c
 androidx-compose-ui = { module = "androidx.compose.ui:ui", version.ref="composeLatest"}
 androidx-compose-ui-graphics = { module = "androidx.compose.ui:ui-graphics"}
 androidx-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview"}
+androidx-compose-material = { module = "androidx.compose.material:material"}
 androidx-compose-material3 = { module = "androidx.compose.material3:material3"}
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref="nav_version"}
 junit = { module = "junit:junit", version.ref="junit"}

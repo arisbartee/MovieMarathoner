@@ -13,6 +13,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.arisbartee.moviemarathoner.ui.parts.MMBottomBar
+import com.arisbartee.moviemarathoner.ui.screens.CatalogScreen
 import com.arisbartee.moviemarathoner.ui.screens.HomeScreen
 import com.arisbartee.moviemarathoner.ui.theme.MovieMarathonerTheme
 
@@ -22,10 +24,18 @@ class MainActivity : ComponentActivity() {
         
         setContent {
             val navController = rememberNavController()
+
             MovieMarathonerTheme {
                 NavHost(navController = navController, startDestination = "home"){
                     composable("home"){
-                        HomeScreen()
+                        HomeScreen(
+                           bottomBar = { MMBottomBar(navController = navController) }
+                        )
+                    }
+                    composable("catalog"){
+                        CatalogScreen(
+                            bottomBar = { MMBottomBar(navController = navController) }
+                        )
                     }
                 }
             }
